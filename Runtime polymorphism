@@ -1,0 +1,33 @@
+class Bank {
+
+    void getRateOfInterest() {
+        System.out.println("Bank gives some rate of interest");
+    }
+}
+class SBI extends Bank {
+
+    @Override
+    void getRateOfInterest() {
+        System.out.println("SBI gives 7% interest");
+    }
+}
+
+class HDFC extends Bank {
+
+    @Override
+    void getRateOfInterest() {
+        System.out.println("HDFC gives 8% interest");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+
+        Bank b;
+
+        b = new SBI();     // parent ref → SBI object
+        b.getRateOfInterest();
+
+        b = new HDFC();    // parent ref → HDFC object
+        b.getRateOfInterest();
+    }
+}
