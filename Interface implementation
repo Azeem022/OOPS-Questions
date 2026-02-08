@@ -1,0 +1,20 @@
+interface Vehicle {
+
+    void start();   // abstract method
+}
+class Car implements Vehicle {
+
+    @Override
+    public void start() {
+        System.out.println("Car starts with key");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+
+        Vehicle v;      // interface reference
+        v = new Car();  // class object
+
+        v.start();      // runtime polymorphism
+    }
+}
