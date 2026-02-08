@@ -1,0 +1,35 @@
+class Student {
+
+    int id;
+
+    Student(int id) {
+        this.id = id;   // current class variable
+    }
+
+    void show() {
+        System.out.println("Student ID: " + this.id);
+    }
+}
+class Person {
+    int age = 40;
+}
+
+class Employee extends Person {
+
+    int age = 25;
+
+    void display() {
+        System.out.println("Employee age: " + age);
+        System.out.println("Person age: " + super.age);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+
+        Student s = new Student(101);
+        s.show();
+
+        Employee e = new Employee();
+        e.display();
+    }
+}
